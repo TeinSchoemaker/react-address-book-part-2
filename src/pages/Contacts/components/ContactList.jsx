@@ -1,10 +1,10 @@
 import ContactListItem from "./ContactListItem"
 
-function ContactList({ contact }) {
+function ContactList({ contacts = [] }) {
     return (
-        <ul>
-            {contact.map((person, index) => (
-                <ContactListItem key={index} person={person} />
+        <ul className="contact-list">
+            {contacts.map((person) => (
+                <ContactListItem key={person.id} person={person} />
             ))}
         </ul>
     );
